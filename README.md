@@ -40,7 +40,7 @@ Make sure you have installed the following prerequesites on your development mac
   ```javascript
   module.exports = {
     postgresPassword: `yourPassword`,
-    postgresUserName: `userName`,
+    postgresUsername: `userName`,
   };
   ```
   * Once your credentials are in this config file you can proceed to the next step.
@@ -57,15 +57,8 @@ Make sure you have installed the following prerequesites on your development mac
  `cd database/data`
  1. Open postgres CLI
  `sudo -u postgres psql`
- 1. Open airbnblisting database
- `\c airbnblisting`
- 1. Enter the following statement to postgres CLI, and import listing1 - listing10 csv files
- 
-  `\copy listings (title,description) from './listing1.csv' HEADER CSV;`
-  
- 5. Enter Copy statement on postgres CLI, and import photos1 - photos10
- 
-  `\copy photos (listingNumber,photos) from './photos1.csv' DELIMITER ';' HEADER CSV;`
+ 1. Run the sql script, to connect to and populate airbnblisting database. Enter the following:
+ `\i populateAirbnbListing.sql`
 
 * Build webpack bundle
 
@@ -75,7 +68,7 @@ Make sure you have installed the following prerequesites on your development mac
 
   `npm run server`
 
-The service will then run on http://localhost:3002. Bundle.js file should also be in http://localhost:3002/bundle.js
+The service will then run on http://localhost:3002. Bundle.js file should also be in http://localhost:3002/app.js
 
 ### Testing w/ Artillery
 - Needs Readme for Artillery usage- See Enhancement [Issue](https://github.com/Epona-SDC/melvin-service/issues/7)
