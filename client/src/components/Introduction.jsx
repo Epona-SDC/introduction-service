@@ -57,9 +57,6 @@ class Introduction extends React.Component {
     }
   }
 
-  componentDidMount(){
-    console.log(this.props);
-  }
 
   render() {
     const style = this.props.css;

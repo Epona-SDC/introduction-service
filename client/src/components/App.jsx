@@ -13,7 +13,7 @@ class App extends React.Component {
 
   getPhotosAndIntro () {
     let endPoint = window.location.href.split('=')[1];
-    $.ajax({
+    return $.ajax({
       method: 'GET',
       url: `http://localhost:3002/api/intro/${endPoint}`,
       success: function(data) {
@@ -26,6 +26,7 @@ class App extends React.Component {
   }
 
   componentDidMount () {
+    // this.setState({intro:[]});
     this.getPhotosAndIntro();
   }
   render () {
