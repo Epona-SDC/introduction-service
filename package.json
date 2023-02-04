@@ -47,6 +47,7 @@
     "react-dom": "^16.13.0",
     "react-styleable": "^3.3.2",
     "style-loader": "^1.1.3",
+    "update": "^0.7.4",
     "webpack": "^4.42.0",
     "webpack-dev-server": "^3.10.3"
   },
