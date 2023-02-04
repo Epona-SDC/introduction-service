@@ -24,3 +24,9 @@ coverage
 build/
 client/public/dist/bundle.js
 
+
+# populated CSVs
+*.csv
+
+# React build file
+client/public/dist/app.js
